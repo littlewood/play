@@ -1,0 +1,85 @@
+
+.pic-play {
+  height: 300px;
+  overflow: hidden;
+  z-index: 0;
+  margin-top: 100px;
+}
+
+.pic-play ul, .pic-play li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pic-play .wrap {
+  height: 100%;
+  white-space: nowrap;
+  position: relative;
+}
+
+.pic-play .wrap ul{
+  height: 150px;
+  perspective: 150px;
+  margin-top: 20px;
+}
+.pic-play .wrap .item {
+  width: 100px;
+  height: 180px;
+  display: inline-block;
+  position: absolute;
+  transition: all .3s;
+  left: -2000px;
+  /*overflow: hidden;*/
+  perspective: 150px;
+  cursor: pointer
+}
+.pic-play .wrap .item.active {
+  width: 150px;
+  z-index: 5
+}
+.pic-play .wrap .item.active .pic{
+  width:  150px;
+}
+.pic-play .wrap .item.out {
+  animation: out .3s .3s
+}
+.pic-play .wrap .item .pic {
+  width: 100px;
+  height: 150px;
+  display: inline-block;
+  transition: all .3s;
+}
+
+.pic-play .page {
+  width: 630px;
+  text-align: center;
+  height: 20px;
+  line-height: 20px;
+  position: absolute;
+  top: 180px;
+}
+.pic-play .page .icon {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  box-sizing: border-box;
+  border: 2px solid #333;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all .2s;
+  font-size: 0;
+  position: relative;
+}
+
+.pic-play .page .icon.active,.pic-play .page .icon:hover {
+  border: 6px solid #000
+}
+
+@keyframes out {
+  100% {
+    left: -3000px
+  }
+}

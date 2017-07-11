@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>轮播图demo</title>
+    <link rel="stylesheet" href="./src/pic.css">
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    <div id="demo" class="pic-play">
+      <div class="wrap">
+        <ul class="list">
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+          <li class="item">
+            <img src="https://placem.at/people?w=100&h=150" alt="" class="pic">
+          </li>
+        </ul>
+        <div class="page"></div>
+      </div>
+    </div>
+    <script src="./lib/jquery-1.11.3.min.js"></script>
+    <script src="./src/jquery.pic.js"></script>
+    <script>
+      $("#demo").pic({
+        num: 10,
+        showNum: 7
+      })
+    </script>
+  </body>
+</html>
