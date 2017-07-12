@@ -13,6 +13,10 @@
 
       $.extend(def, opt)
 
+      if (def.showNum % 2 === 0) {
+        def.showNum = def.showNum + 1
+      }
+
       var $el = $(this)
       var currentIndex = -1
       var $currentItem = []
@@ -30,9 +34,6 @@
           sideNum = Math.floor(def.showNum / 2)
           itemWidth = def.itemWidth || $allItem.eq(0).width()
           activeItemWidth = def.activeItemWidth || 150
-
-          console.log(itemWidth, activeItemWidth, def.showNum)
-
           $el.width(itemWidth * (def.showNum - 1) + (activeItemWidth ))
         },
         bindEvt: function () {
@@ -48,7 +49,7 @@
           this.setClass()
         },
         getCurrentItem: function () {
-          return $el.find(".item").eq(currentIndex)
+          return $allItem.eq(currentIndex)
         },
         checkNum: function (index) {
           if (index < 0) {
@@ -158,10 +159,10 @@
           $page.html(html)
         },
         init: function () {
-          this.bindEvt();
           this.initData();
           this.renderPage()
           this.setClass();
+          this.bindEvt();
         }
       }
 
